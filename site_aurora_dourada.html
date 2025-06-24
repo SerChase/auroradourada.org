@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora Dourada</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'DM Sans', sans-serif;
+      background-color: white;
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .navbar img {
+      height: 60px;
+      max-width: 100%;
+    }
+    .nav-links a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .banner {
+      background: url('https://cdn.pixabay.com/photo/2016/11/29/10/07/forest-1868028_960_720.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 2rem;
+    }
+    .banner h1 {
+      font-size: 3rem;
+      background: rgba(0,0,0,0.5);
+      padding: 1rem;
+    }
+    .banner button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border: none;
+      background-color: #d4af37;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .testemunho {
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+    footer {
+      background-color: #f5f5f5;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      position: relative;
+    }
+    footer .hidden-link {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <img src="logo-aurora.png" alt="Logo Aurora Dourada">
+      <nav class="nav-links">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#iniciativas">Iniciativas</a>
+        <a href="#testemunhos">Testemunhos</a>
+        <a href="#voluntariado">Voluntariado</a>
+        <a href="/interno" style="color: transparent;">A Luz nos Consome</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="banner" id="inicio">
+    <h1>Ilumine-se. Renasça com a Aurora.</h1>
+    <button onclick="document.getElementById('sobre').scrollIntoView({behavior: 'smooth'});">Descubra a Luz</button>
+  </div>
+
+  <section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>A Aurora Dourada é uma organização sem fins lucrativos dedicada a oferecer ajuda física e apoio financeiro a comunidades em situação de vulnerabilidade. Fundada com base na iniciativa de Anthony Miller, e hoje conduzida estrategicamente por Anthony Ivo Ferreira, a ONG promove ações concretas de acolhimento, distribuição de alimentos, doações e suporte emergencial a quem mais precisa.</p>
+  </section>
+
+  <section id="iniciativas">
+    <h2>Iniciativas</h2>
+    <div class="card">
+      <h3>Projeto Semente Viva</h3>
+      <p>Distribuição de cestas básicas e kits de higiene para jovens e famílias em situação de risco.</p>
+    </div>
+    <div class="card">
+      <h3>Programa Alvorada</h3>
+      <p>Mutirões comunitários e atendimento social gratuito.</p>
+    </div>
+    <div class="card">
+      <h3>Círculo de Reintegração</h3>
+      <p>Acompanhamento de pessoas que buscam reestabelecimento financeiro e reinserção no mercado de trabalho.</p>
+    </div>
+  </section>
+
+  <section id="testemunhos">
+    <h2>Testemunhos</h2>
+    <p class="testemunho">
+      "Receber apoio da Aurora Dourada foi essencial. Hoje tenho comida na mesa e esperança."
+    </p>
+    <p class="testemunho">
+      "A ajuda chegou no momento mais difícil. Serei eternamente grata pela assistência."
+    </p>
+  </section>
+
+  <section id="voluntariado">
+    <h2>Voluntariado</h2>
+    <form>
+      <label>Nome completo:<br><input type="text" name="nome" required></label><br><br>
+      <label>Data de nascimento:<br><input type="date" name="nascimento" required></label><br><br>
+      <label>E-mail:<br><input type="email" name="email" required></label><br><br>
+      <label>Telefone:<br><input type="tel" name="telefone"></label><br><br>
+      <label>Motivação para se juntar:<br><textarea name="motivacao" required></textarea></label><br><br>
+      <label>Você já participou de ações sociais antes?
+        <select name="experiencia"><option>Sim</option><option>Não</option></select>
+      </label><br><br>
+      <label>Está disponível aos finais de semana?
+        <select name="disponibilidade"><option>Sim</option><option>Não</option></select>
+      </label><br><br>
+      <label><input type="checkbox" required> Aceito o armazenamento e uso das informações.</label><br><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>A Aurora Dourada não é filiada a nenhuma instituição religiosa ou política.</p>
+    <p class="hidden-link"><a href="/interno">A Luz nos Consome</a></p>
+    <p>Contato: <a href="mailto:douradaorgaurora@gmail.com">douradaorgaurora@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
